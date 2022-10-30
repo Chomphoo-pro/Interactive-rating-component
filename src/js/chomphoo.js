@@ -23,6 +23,7 @@ function submit(){
         //  INSTANCIE ELEMENT
         //
         let child = document.createElement("div");
+        let img = document.createElement("img");
         let reviewSelected = document.createElement("div");
         let title = document.createElement("h1");
         let paragraph = document.createElement("p");
@@ -40,6 +41,7 @@ function submit(){
         //
         //  UPDATE ELEMENTS TO DOM
         //
+        child.append(img);
         child.append(reviewSelected);
         child.append(title);
         child.append(paragraph);
@@ -50,12 +52,19 @@ function submit(){
         //
         document.getElementById("child").remove();
 
+
         //
-        //  UPDATE ELEMENTS TO DOM
+        //  SET ATTRIBUTE
         //
+        img.setAttribute("alt", "thanks you");
+        img.setAttribute("srcset", "images/illustration-thank-you.svg");
         child.setAttribute("id", "child");
         reviewSelected.setAttribute("class", "rating");
 
+
+        //
+        //  UPDATE ELEMENTS TO DOM
+        //
         document.getElementById("card").append(child);
 
     }
