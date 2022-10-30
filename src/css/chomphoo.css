@@ -74,6 +74,11 @@ img {
     background-color: var(--gray-color);
 }
 
+.review:hover{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
 .reviewList {
     display: flex;
     place-content: space-between;
@@ -84,17 +89,21 @@ img {
     background-color: var(--light-gray-color);
 }
 
-
 .buttonSubmit {
     user-select: none;
     cursor: pointer;
     letter-spacing: 0.15rem;
     text-align-last: center;
-    color: var(--white-color);
     border-radius: 20px;
     margin-top: 1rem;
     padding: 1rem;
+    color: var(--white-color);
     background-color: var(--primary-color);
+}
+
+.buttonSubmit:hover {
+    color: var(--primary-color);
+    background-color: var(--white-color);
 }
 
 .rating {
