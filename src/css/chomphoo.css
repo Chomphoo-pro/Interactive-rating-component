@@ -39,6 +39,7 @@ body {
 
 #card {
     padding: 2em;
+    border-radius: 20px;
     background-color: var(--light-dark-color);
 }
 
@@ -47,6 +48,9 @@ h1 {
 }
 
 .review {
+    width: 2em;
+    height: 2em;
+    border-radius: 1em;
     color: var(--dark-white-color);
     background-color: var(--gray-color);
 }
@@ -67,6 +71,7 @@ h1 {
 .buttonSubmit {
     text-align-last: center;
     color: var(--white-color);
+    border-radius: 20px;
     background-color: var(--primary-color);
 }
 
