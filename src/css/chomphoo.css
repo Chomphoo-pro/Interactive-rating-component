@@ -107,6 +107,19 @@ img {
     background-color: var(--gray-color);
 }
 
+.left {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#star{
+    width: 1rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background-color: var(--gray-color);
+}
+
 @media screen and (min-width:1000px) {
     #child {
         width: 350px;
