@@ -1,3 +1,17 @@
+
+:root {
+    --primary-color: #f77915;
+
+    --white-color: white;
+    --dark-white-color: #868f98;
+
+    --light-gray-color: #7c8898;
+    --gray-color: #262f38;
+
+    --light-dark-color: #1a212b;
+    --dark-color: #141519;
+  }
+
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -5,4 +19,34 @@
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+body{
+    font-family: sans-serif;
+    color: var(--dark-white-color);
+    background-color: var(--dark-color);
+}
+
+#card{
+    background-color: var(--light-dark-color);
+}
+
+h1{
+    color: var(--white-color);
+}
+
+.review{
+    color: var(--dark-white-color);
+    background-color: var(--gray-color);
+}
+
+.selected{
+    color: var(--white-color);
+    background-color: var(--light-gray-color);
+}
+
+
+.buttonSubmit{
+    color: var(--white-color);
+    background-color: var(--primary-color);
 }
