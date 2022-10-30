@@ -22,28 +22,34 @@
 
 html,
 body {
+    margin: 0px;
+    padding: 0px;
     height: 100%;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    justify-content: center;
     font-family: sans-serif;
     color: var(--dark-white-color);
     background-color: var(--dark-color);
 }
 
 #card {
-    padding: 2em;
+    max-width: min-content;
     border-radius: 20px;
     background-color: var(--light-dark-color);
 }
 
+#child{
+    width: 80vw;
+    padding: 1.5rem;
+}
+
 h1 {
+    min-width: max-content;
     color: var(--white-color);
 }
 
@@ -53,18 +59,18 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 2em;
-    height: 2em;
-    border-radius: 1em;
+    margin: 0.75rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    font-size: x-large;
     color: var(--dark-white-color);
     background-color: var(--gray-color);
 }
 
 .reviewList {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 1em;
+    place-content: space-between;
 }
 
 .selected {
@@ -76,16 +82,26 @@ h1 {
 .buttonSubmit {
     user-select: none;
     cursor: pointer;
+    letter-spacing: 0.15rem;
     text-align-last: center;
     color: var(--white-color);
     border-radius: 20px;
-    padding: 1em;
+    margin-top: 1rem;
+    padding: 1rem;
     background-color: var(--primary-color);
 }
 
+.rating{
+    border-radius: 20px;
+    padding: 0.5rem;
+    min-width: max-content;
+    color: var(--primary-color);
+    background-color: var(--gray-color);
+}
+
 @media screen and (min-width:1000px) {
-    body {
-        padding-left: 35%;
-        padding-right: 35%;
+    #child{
+        width: 350px;
     }
+
 }
