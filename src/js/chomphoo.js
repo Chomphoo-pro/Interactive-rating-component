@@ -1,3 +1,5 @@
+//REVIEW
+
 function selectReview(reviewId){
     let nbReview = 5;
 
@@ -8,8 +10,53 @@ function selectReview(reviewId){
     document.getElementById(reviewId).classList.add("selected") //add class "selected"
 }
 
+//return 0 if undefined
+function getReview(){
+    return (document.getElementsByClassName("selected")[0] != undefined ? document.getElementsByClassName("selected")[0].id : 0);
+}
+
 function submit(){
-    //Default if not selected: NA
-    let reviewSelected = (document.getElementsByClassName("selected")[0] != undefined ? document.getElementsByClassName("selected")[0].id : "NA");
-    console.log("review " + reviewSelected + " is selected");
+
+    if (getReview()){//Only if review is selected
+
+        //
+        //  INSTANCIE ELEMENT
+        //
+        let child = document.createElement("div");
+        let reviewSelected = document.createElement("div");
+        let title = document.createElement("h1");
+        let paragraph = document.createElement("p");
+
+
+        //
+        //  UPDATE ELEMENT TEXT
+        //
+        reviewSelected.append("You selected "+getReview()+" out of 5");
+        title.append("Thank you!");
+        paragraph.append("We appreciate you taking the time to give a rating. If you ever need more support,"+
+        "don’t hesitate to get in touch!");
+
+
+        //
+        //  UPDATE ELEMENTS TO DOM
+        //
+        child.append(reviewSelected);
+        child.append(title);
+        child.append(paragraph);
+
+
+        //
+        //  REMOVE ELEMENT "CHILD" BY ID FROM DOM
+        //
+        document.getElementById("child").remove();
+
+        //
+        //  UPDATE ELEMENTS TO DOM
+        //
+        child.setAttribute("id", "child");
+        reviewSelected.setAttribute("class", "rating");
+
+        document.getElementById("card").append(child);
+
+    }
 }
